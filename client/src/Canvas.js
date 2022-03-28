@@ -6,19 +6,9 @@ export default function Canvas() {
 
   return (
     <div className="flex flex-col items-center justify-center">
-      {/* Title */}
-      <h1 className="text-8xl font-extrabold m-8">
-        Pictionary
-      </h1>
-
-      {/* Description */}
-      <text className="text-4xl font-normal mb-8">
-        Draw something in the canvas and let our neural network try to guess what it is!
-      </text>
-
       {/* Top row of buttons */}
       <div className="flex flex-row justify-center">
-        {/* Undo */}
+        {/* Undo button */}
         <button
           className="block text-xl m-2"
           onClick={() => {
@@ -28,7 +18,7 @@ export default function Canvas() {
           Undo
         </button>
 
-        {/* Clear canvas */}
+        {/* Clear button */}
         <button
           className="block text-xl m-2"
           onClick={() => {
@@ -41,7 +31,7 @@ export default function Canvas() {
 
       {/* Canvas object */}
       <CanvasDraw
-        className="border-4 border-black m-4"
+        className="border-4 border-black shadow-2xl m-4"
         ref={canvasDraw => (canvas = canvasDraw)}
         hideInterface
         hideGrid
@@ -52,7 +42,7 @@ export default function Canvas() {
         canvasHeight={500}
       />
 
-      {/* Save canvas */}
+      {/* Save button */}
       <button
         class="block accent text-3xl"
         onClick={() => {
