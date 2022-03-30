@@ -10,7 +10,7 @@ services:
     volumes:
       - ./server:/usr/src/app
     ports:
-      - "5000:5000"
+      - "8000:8000"
     networks:
       - app-network
   client:
