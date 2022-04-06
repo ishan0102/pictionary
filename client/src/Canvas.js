@@ -18,7 +18,6 @@ export default function Canvas() {
 
   return (
     <div className="flex flex-col items-center justify-center">
-      uuid: { uuid.substring(0, 8) }
       {/* Top row of buttons */}
       <div className="flex flex-row justify-center">
         {/* Undo button */}

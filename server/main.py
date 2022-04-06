@@ -14,14 +14,6 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-@app.get("/")
-async def root():
-    return {"message": "Hello World"}
-
-@app.get("/open")
-async def open_image():
-    return {"message": "open image"}
-
 @app.post("/save")
 async def save_image(request: Request):
     content = await request.json()
