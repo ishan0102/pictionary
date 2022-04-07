@@ -58,10 +58,6 @@ export default function Canvas() {
       <button
         class="block accent text-3xl"
         onClick={() => {
-          localStorage.setItem(
-            "savedDrawing",
-            canvas.getSaveData()
-          );
           handleSave(canvas.getSaveData());
         }}
       >
