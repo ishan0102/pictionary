@@ -1,8 +1,20 @@
-import {createRef} from 'react';
+import { createRef } from 'react';
 import CanvasDraw from 'react-canvas-draw';
 
+import { v4 as uuidv4 } from 'uuid';
+import axios from 'axios';
+
+const DEBUG = true;
+const ENDPOINT = DEBUG ? 'http://localhost:8000' : '';
+
+
 export default function Canvas() {
-  var canvas = createRef();
+  let canvas = createRef();
+  let uuid = uuidv4();
+
+  const handleSave = async (data) => {
+    const res = await axios.post(`${ENDPOINT}/save`, {uuid: uuid, strokes: data});
+  }
 
   return (
     <div className="flex flex-col items-center justify-center">
@@ -46,10 +58,7 @@ export default function Canvas() {
       <button
         class="block accent text-3xl"
         onClick={() => {
-          localStorage.setItem(
-            "savedDrawing",
-            canvas.getSaveData()
-          );
+          handleSave(canvas.getSaveData());
         }}
       >
         Save
