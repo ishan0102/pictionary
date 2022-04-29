@@ -1,4 +1,4 @@
-import { createRef } from 'react';
+import { createRef, useState } from 'react';
 import CanvasDraw from 'react-canvas-draw';
 
 import { v4 as uuidv4 } from 'uuid';
@@ -11,9 +11,11 @@ const ENDPOINT = DEBUG ? 'http://localhost:8000' : '';
 export default function Canvas() {
   let canvas = createRef();
   let uuid = uuidv4();
+  const [prediction, setPrediction] = useState(null);
 
   const handleSave = async (data) => {
     const res = await axios.post(`${ENDPOINT}/save`, {uuid: uuid, strokes: data});
+    setPrediction(`${res.data.class} with probability ${res.data.probability}`);
   }
 
   return (
@@ -63,6 +65,9 @@ export default function Canvas() {
       >
         Save
       </button>
+      <div>
+        {prediction}
+      </div>
     </div>
   );
 }
