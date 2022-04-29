@@ -10,3 +10,6 @@ predict_temp.tfrecord
 
 # Archiving and Backups
 *.zip
+
+# pickle files
+*.pkl
