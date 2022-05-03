@@ -6,8 +6,8 @@ import axios from 'axios';
 
 import categories from './data/categories.json';
 
-const DEBUG = true;
-const ENDPOINT = DEBUG ? 'http://localhost:8000' : '';
+const DEBUG = false;
+const ENDPOINT = DEBUG ? 'http://localhost:8000' : 'http://bore.pub:38239';
 
 
 export default function Canvas() {
