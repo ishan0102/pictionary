@@ -3,3 +3,13 @@
 
 # MacOS
 .DS_Store
+
+# ML
+models/
+predict_temp.tfrecord
+
+# Archiving and Backups
+*.zip
+
+# pickle files
+*.pkl
