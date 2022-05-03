@@ -1,3 +1,8 @@
 __pycache__
 .ipynb_checkpoints
 data/
+
+# GAN Model
+gan_resources/gan_images/*
+gan_resources/gan_data/*.ndjson
+gan_resources/preprocessed_images/*.npy
