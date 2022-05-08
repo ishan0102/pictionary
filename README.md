@@ -3,6 +3,8 @@ This is our final project for Computer Vision (EE 379V) at UT Austin. Our group 
 
 This project seeks to use computer vision to recreate a computer-based game of Pictionary, in which a human player draws an image and the computer attempts to guess the drawing. We also plan on having the computer generate drawings for the player to guess using Generative Adversarial Networks (GANs).
 
+![demo_gif](videos/pictionary.mov)
+
 ## Development
 The development environment is containerized, so both the server and client can be run with a single Docker command. After installing [Docker](https://docs.docker.com/get-docker/), simply run the following command:
 
